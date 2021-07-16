@@ -1,0 +1,6 @@
+/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/obj/Debug/algo.csproj.AssemblyReference.cache
+/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/obj/Debug/algo.csproj.CoreCompileInputs.cache
+/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/bin/Debug/algo.exe
+/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/bin/Debug/algo.pdb
+/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/obj/Debug/algo.exe
+/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/obj/Debug/algo.pdb
