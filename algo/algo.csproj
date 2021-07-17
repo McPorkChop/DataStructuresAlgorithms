@@ -32,6 +32,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="helper\LogHelper.cs" />
     <Compile Include="model\AbstractArrayBase.cs" />
     <Compile Include="model\IQueue.cs" />
     <Compile Include="model\IStack.cs" />

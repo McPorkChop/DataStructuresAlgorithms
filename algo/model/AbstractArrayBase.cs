@@ -19,18 +19,20 @@ namespace algo.model
         /// <param name="capacity">初始大小</param>
         protected AbstractArrayBase(int capacity = 32)
         {
-            Db = new T[32];
+            Db = new T[capacity];
         }
 
         /// <summary>
         ///     扩容
         /// </summary>
-        
-        public virtual void Expand()
+        /// <param name="start">开始位置</param>
+        /// <param name="length">数据长度</param>
+        public virtual void Expand(int start = 0, int? length = null)
         {
             var newLength = Convert.ToInt32(Db.Length * (1 + IncreaseFactor));
+            var end = length ?? Db.Length - start - 1;
             var newArray = new T[newLength];
-            for (var i = 0; i < Db.Length; i++) newArray[i] = Db[i];
+            for (var i = 0; i <= end; i++) newArray[i] = Db[start + i];
 
             Db = newArray;
         }

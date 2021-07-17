@@ -19,7 +19,7 @@ namespace algo.model
         /// <summary>
         ///     是否满栈
         /// </summary>
-        public bool IsFull => _top >= Db.Length;
+        public bool IsFull => _top+1 >= Db.Length;
 
         /// <summary>
         ///     栈是否为空
@@ -34,12 +34,12 @@ namespace algo.model
         /// <summary>
         ///     栈顶元素
         /// </summary>
-        public T? Top => IsNotEmpty ? Db[_top] : new T?();
+        public T? Top => IsNotEmpty ? Db[_top] : default;
 
         public T Push(T el)
         {
             if (IsFull) throw new Exception("当前栈已满，请先执行Expand进行扩容");
-            Db[_top++] = el;
+            Db[++_top] = el;
             return el;
         }
 
@@ -49,7 +49,7 @@ namespace algo.model
         /// <returns></returns>
         public T? Pop()
         {
-            return IsEmpty ? new T?() : Db[_top--];
+            return IsEmpty ? default : Db[_top--];
         }
     }
 }

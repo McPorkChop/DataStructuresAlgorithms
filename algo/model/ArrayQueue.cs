@@ -2,69 +2,76 @@
 
 namespace algo.model
 {
-    public class ArrayQueue<T> : AbstractArrayBase<T>, IQueue<T>
+    /// <summary>
+    ///     普通数组队列
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class ArrayQueue<T> : AbstractArrayBase<T>, IQueue<T>where T : class
     {
         /// <summary>
         ///     头指针
         /// </summary>
-        private  int head = -1;
+        private int _head = -1;
 
         /// <summary>
         ///     尾指针
         /// </summary>
-        private  int tail = -1;
+        private int _tail = -1;
 
         /// <summary>
-        ///  是否满队
+        ///     是否满队
         /// </summary>
-        public bool IsFull => tail - head + 1 >= Db.Length;
+        public bool IsFull => _tail - _head + 1 >= Db.Length;
 
-        public bool IsEmpty => head < 0 || tail < 0;
-        public bool IsNotEmpty => head >= 0 && tail >= 0;
+        public bool IsEmpty => _head < 0 || _tail < 0;
+        public bool IsNotEmpty => _head >= 0 && _tail >= 0;
 
-        
-/// <summary>
-/// 将队列移至首地址开始
-/// </summary>
-        private void MoveToZero()
-        {
-            if (head <= 0) return;
-            for (var i = head; i <= tail; i++)
-            {
-                Db[i - head] = Db[i];
-            }
-
-            tail -= head;
-            head = 0;
-        }
-        
         public T Enqueue(T el)
         {
-            if (IsFull)
-            {
-                throw new Exception("当前队列已满，请先执行Expand进行扩容");
-            }
+            if (IsFull) throw new Exception("当前队列已满，请先执行Expand进行扩容");
 
-            if (tail+1>=Db.Length)
-            {
-                MoveToZero();
-            }
+            if (_tail + 1 >= Db.Length) MoveToZero();
 
-            Db[++tail] = el;
-            if (head < 0) head = 0;
+            Db[++_tail] = el;
+            if (_head < 0) _head = 0;
             return el;
         }
 
         public T? Dequeue()
         {
-            if(IsEmpty) return new T?();
-            var result= Db[head++];
-            if (head > tail)
-            {
-                head = tail = -1;
-            }
+            if (IsEmpty) return default;
+            var result = Db[_head++];
+            if (_head > _tail) _head = _tail = -1;
 
             return result;
+        }
+
+
+        /// <summary>
+        ///     扩容
+        /// </summary>
+        public void Expand()
+        {
+            if (IsEmpty)
+            {
+                base.Expand();
+                return;
+            }
+
+            MoveToZero();
+            base.Expand(0, _tail - _head);
+        }
+
+        /// <summary>
+        ///     将队列移至首地址开始
+        /// </summary>
+        private void MoveToZero()
+        {
+            if (_head <= 0) return;
+            for (var i = _head; i <= _tail; i++) Db[i - _head] = Db[i];
+
+            _tail -= _head;
+            _head = 0;
         }
     }
 }
