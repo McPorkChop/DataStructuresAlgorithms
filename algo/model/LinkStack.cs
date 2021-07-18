@@ -3,7 +3,7 @@
     /// <summary>
     ///     链表栈
     /// </summary>
-    public class LinkStack<T> : IStack<T>where T : class
+    public class LinkStack<T> : IStack<T>
 
     {
         /// <summary>
@@ -13,7 +13,15 @@
 
         public bool IsEmpty => _top.Next == null;
         public bool IsNotEmpty => _top.Next == null;
-        public T? Top => _top.Data;
+
+        public T? Top
+        {
+            get
+            {
+                if (_top.Next == null) return default;
+                return _top.Next.Data;
+            }
+        }
 
         public T Push(T el)
         {
@@ -25,7 +33,9 @@
         public T? Pop()
         {
             if (_top.Next == null) return default;
-            return _top.Next.Data ?? default;
+            var result = _top.Next.Data;
+            _top.Next = _top.Next.Next;
+            return result;
         }
     }
 }

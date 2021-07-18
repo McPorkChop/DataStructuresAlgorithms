@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.810.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "algo", "algo\algo.csproj", "{8658761D-C61A-4918-9C49-6DF30B827B7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoTest", "AlgoTest\AlgoTest.csproj", "{8C05AED5-0428-410F-9703-3692A042FD26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -15,6 +17,10 @@ Global
 		{8658761D-C61A-4918-9C49-6DF30B827B7D}.Debug|anycpu.Build.0 = Debug|anycpu
 		{8658761D-C61A-4918-9C49-6DF30B827B7D}.Release|anycpu.ActiveCfg = Release|anycpu
 		{8658761D-C61A-4918-9C49-6DF30B827B7D}.Release|anycpu.Build.0 = Release|anycpu
+		{8C05AED5-0428-410F-9703-3692A042FD26}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{8C05AED5-0428-410F-9703-3692A042FD26}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{8C05AED5-0428-410F-9703-3692A042FD26}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{8C05AED5-0428-410F-9703-3692A042FD26}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

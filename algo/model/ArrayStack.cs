@@ -19,7 +19,7 @@ namespace algo.model
         /// <summary>
         ///     是否满栈
         /// </summary>
-        public bool IsFull => _top+1 >= Db.Length;
+        public bool IsFull => _top + 1 >= Db.Length;
 
         /// <summary>
         ///     栈是否为空

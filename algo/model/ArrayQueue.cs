@@ -6,7 +6,7 @@ namespace algo.model
     ///     普通数组队列
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class ArrayQueue<T> : AbstractArrayBase<T>, IQueue<T>where T : class
+    public class ArrayQueue<T> : AbstractArrayBase<T>, IQueue<T>
     {
         /// <summary>
         ///     头指针
@@ -17,6 +17,10 @@ namespace algo.model
         ///     尾指针
         /// </summary>
         private int _tail = -1;
+
+        public ArrayQueue(int capacity = 32) : base(capacity)
+        {
+        }
 
         /// <summary>
         ///     是否满队
@@ -45,6 +49,8 @@ namespace algo.model
 
             return result;
         }
+
+        public T? Next => IsEmpty ? default : Db[_head];
 
 
         /// <summary>

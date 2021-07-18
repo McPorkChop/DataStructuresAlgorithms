@@ -4,7 +4,7 @@
     ///     单链表节点结构
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class LinkNode<T>where T : class
+    public class LinkNode<T>
     {
         public LinkNode()
         {
@@ -12,10 +12,10 @@
             Next = null;
         }
 
-        public LinkNode(T data, LinkNode<T>? next=null)
+        public LinkNode(T data, LinkNode<T>? next = null)
         {
-            this.Data = data;
-            this.Next = next;
+            Data = data;
+            Next = next;
         }
 
         /// <summary>

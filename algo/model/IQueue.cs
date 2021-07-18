@@ -13,6 +13,11 @@ namespace algo.model
         bool IsNotEmpty { get; }
 
         /// <summary>
+        ///     下一个出队元素
+        /// </summary>
+        T? Next { get; }
+
+        /// <summary>
         ///     入队
         /// </summary>
         /// <param name="el">入队元素</param>

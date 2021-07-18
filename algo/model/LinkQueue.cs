@@ -1,31 +1,32 @@
 ﻿namespace algo.model
 {
-    public class LinkQueue<T>:IQueue<T>where T : class
+    public class LinkQueue<T> : IQueue<T>
     {
         /// <summary>
-        /// 头指针，完全不存放任何数据
+        ///     头指针，完全不存放任何数据
         /// </summary>
-        private LinkNode<T> _head=new LinkNode<T>();
+        private readonly LinkNode<T> _head = new();
 
         /// <summary>
-        /// 尾指针
+        ///     尾指针
         /// </summary>
-        private LinkNode<T>? _tail=null;
+        private LinkNode<T>? _tail;
 
 
-        public bool IsEmpty => _head.Next == _tail;
-        public bool IsNotEmpty => _head.Next != _tail;
+        public bool IsEmpty => _head.Next == null || _tail == null;
+        public bool IsNotEmpty => _head.Next != null && _tail != null;
+
         public T Enqueue(T el)
         {
             var node = new LinkNode<T>(el);
             if (IsEmpty)
             {
-                _head.Next = node;
+                _head.Next = _tail = node;
+                return el;
             }
-            else
-            {
-                _tail!.Next = node;
-            }
+
+
+            _tail!.Next = node;
             _tail = node;
 
             return el;
@@ -38,6 +39,15 @@
             _head.Next = _head.Next?.Next;
             if (_head.Next == null) _tail = null;
             return result;
+        }
+
+        public T? Next
+        {
+            get
+            {
+                if (_head.Next == null) return default;
+                return _head.Next.Data;
+            }
         }
     }
 }
