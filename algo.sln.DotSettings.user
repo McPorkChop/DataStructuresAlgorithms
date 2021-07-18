@@ -1,0 +1,14 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=36c6d205_002D224e_002D4ef7_002D8f9b_002D885ab5368a52/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.ArrayStackTest.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.ArrayQueueTest.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.LinkQueueTest.IsPrime_InputIs1_ReturnFalse&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.LinkQueueTest.Test1&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=84ac7042_002D036f_002D44f3_002Da634_002D59bb201a1914/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.StackTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

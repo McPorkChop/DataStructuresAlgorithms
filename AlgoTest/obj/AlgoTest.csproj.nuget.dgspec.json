@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/alfredmcporkchop/Playgrounds/algo/algo/AlgoTest/AlgoTest.csproj": {}
+  },
+  "projects": {
+    "/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/algo.csproj": {
+      "restore": {
+        "projectUniqueName": "/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/algo.csproj",
+        "projectName": "algo",
+        "projectPath": "/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/algo.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "/Users/alfredmcporkchop/Playgrounds/algo/algo/AlgoTest/AlgoTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alfredmcporkchop/Playgrounds/algo/algo/AlgoTest/AlgoTest.csproj",
+        "projectName": "AlgoTest",
+        "projectPath": "/Users/alfredmcporkchop/Playgrounds/algo/algo/AlgoTest/AlgoTest.csproj",
+        "packagesPath": "/Users/alfredmcporkchop/.nuget/packages/",
+        "outputPath": "/Users/alfredmcporkchop/Playgrounds/algo/algo/AlgoTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alfredmcporkchop/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/algo.csproj": {
+                "projectPath": "/Users/alfredmcporkchop/Playgrounds/algo/algo/algo/algo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.17.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/alfredmcporkchop/.dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
