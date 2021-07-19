@@ -17,7 +17,12 @@ namespace algo.model
         /// </summary>
         private int _tail;
 
-        public ArrayCircularQueue(int capacity) : base(capacity)
+        /// <summary>
+        /// 尺寸
+        /// </summary>
+        public override int Size => Db.Length - 1;
+
+        public ArrayCircularQueue(int capacity=32) : base(capacity)
         {
         }
 
@@ -34,7 +39,7 @@ namespace algo.model
         {
             if (IsFull) throw new Exception("当前队已满，请先执行Expand进行扩容");
 
-
+            if (_head < 0) _head = 0;
             Db[_tail] = el;
             _tail = ++_tail % Db.Length;
             return el;
@@ -45,6 +50,11 @@ namespace algo.model
             if (IsEmpty) return default;
             var result = Db[_head];
             _head = ++_head % Db.Length;
+            if (_head == _tail)
+            {
+                _head = -1;
+                _tail = 0;
+            }
             return result;
         }
 
@@ -63,14 +73,14 @@ namespace algo.model
             }
 
             var start = _head;
-            var end = _tail - _head;
-            if (end < 0) end += Db.Length;
+            var end = _tail;
+            if (end < start) end += Db.Length;
             var offset = end - start;
             var tmp = _head;
             var head = 0;
             do
             {
-                newArray[++head] = Db[tmp];
+                newArray[head++] = Db[tmp];
             } while ((tmp = ++tmp % Db.Length) != _tail);
 
             _tail = offset;

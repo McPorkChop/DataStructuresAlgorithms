@@ -7,8 +7,16 @@
     &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.LinkQueueTest.Test1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=84ac7042_002D036f_002D44f3_002Da634_002D59bb201a1914/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=84ac7042_002D036f_002D44f3_002Da634_002D59bb201a1914/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.StackTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.QueueTest.Link&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.QueueTest.NormalArray&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.QueueTest.CircleArray&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d9ed7520_002D58d6_002D4b12_002D925e_002D63e49290c1a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CircleArray" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::8C05AED5-0428-410F-9703-3692A042FD26::net5.0::AlgoTest.QueueTest.CircleArray&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

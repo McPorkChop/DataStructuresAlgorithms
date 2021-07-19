@@ -23,6 +23,11 @@ namespace algo.model
         }
 
         /// <summary>
+        ///     数组大小
+        /// </summary>
+        public virtual int Size => Db.Length;
+
+        /// <summary>
         ///     扩容
         /// </summary>
         /// <param name="start">开始位置</param>
