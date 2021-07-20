@@ -17,14 +17,14 @@ namespace algo.model
         /// </summary>
         private int _tail;
 
-        /// <summary>
-        /// 尺寸
-        /// </summary>
-        public override int Size => Db.Length - 1;
-
-        public ArrayCircularQueue(int capacity=32) : base(capacity)
+        public ArrayCircularQueue(int capacity = 32) : base(capacity)
         {
         }
+
+        /// <summary>
+        ///     尺寸
+        /// </summary>
+        public override int Size => Db.Length - 1;
 
         /// <summary>
         ///     是否满队
@@ -55,6 +55,7 @@ namespace algo.model
                 _head = -1;
                 _tail = 0;
             }
+
             return result;
         }
 

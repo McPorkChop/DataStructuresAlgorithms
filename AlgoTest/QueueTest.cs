@@ -13,7 +13,7 @@ namespace AlgoTest
         }
 
         /// <summary>
-        ///  普通数组实现
+        ///     普通数组实现
         /// </summary>
         [Test]
         public void NormalArray()
@@ -38,7 +38,7 @@ namespace AlgoTest
                 var seek = new Random();
                 for (var i = 51; i < 10000; i++)
                     if (seek.Next(100) % 3 == 0) array.Dequeue();
-                    else  array.Enqueue(i);
+                    else array.Enqueue(i);
             });
 
 
@@ -79,7 +79,7 @@ namespace AlgoTest
 
             Assert.IsTrue(queue.IsEmpty);
         }
-        
+
         /// <summary>
         ///     循环队列实现
         /// </summary>
@@ -100,13 +100,13 @@ namespace AlgoTest
             Assert.AreEqual(array.Next, 2);
 
             array.Expand();
-            Assert.AreEqual(array.Size, Convert.ToInt32(32 * 1.75)-1);
+            Assert.AreEqual(array.Size, Convert.ToInt32(32 * 1.75) - 1);
             Assert.Catch(() =>
             {
                 var seek = new Random();
                 for (var i = 51; i < 10000; i++)
                     if (seek.Next(100) % 3 == 0) array.Dequeue();
-                    else  array.Enqueue(i);
+                    else array.Enqueue(i);
             });
 
 
@@ -117,6 +117,32 @@ namespace AlgoTest
             } while (array.IsNotEmpty);
 
             Assert.IsTrue(array.IsEmpty);
+        }
+
+        [Test]
+        public void CircleLink()
+        {
+            var queue = new LinkCircularQueue<int>();
+            for (var i = 1; i <= 50; i++) queue.Enqueue(i);
+            Assert.AreEqual(queue.Next, 1);
+            var first = queue.Dequeue();
+            Assert.AreEqual(queue.Next, 2);
+            Assert.AreEqual(first, 1);
+
+            for (var i = 0; i < 30; i++) queue.Dequeue();
+            Assert.AreEqual(queue.Next, 32);
+
+            for (var i = 50; i < 70; i++) queue.Enqueue(i);
+
+
+            do
+            {
+                queue.Dequeue();
+            } while (queue.IsNotEmpty);
+
+            Assert.AreEqual(queue.Dequeue(), 0);
+
+            Assert.IsTrue(queue.IsEmpty);
         }
     }
 }
