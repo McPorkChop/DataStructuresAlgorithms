@@ -1,12 +1,21 @@
-﻿<Properties StartupConfiguration="{8658761D-C61A-4918-9C49-6DF30B827B7D}|Default">
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{8658761D-C61A-4918-9C49-6DF30B827B7D}|Default">
   <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="algo/model/BinaryTreeNode.cs" Line="32" Column="10" />
+      <File FileName="algo/model/ITree.cs" Line="4" Column="23" />
+      <File FileName="algo/model/IBinaryTree.cs" Line="33" Column="36" />
+      <File FileName="algo/model/AVLTree.cs" Line="44" Column="19" />
+      <File FileName="algo/model/IQueue.cs" Line="1" Column="1" />
+      <File FileName="algo/model/RedBlackTree.cs" Line="12" Column="6" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="algo" expanded="True">
             <Node name="algo" expanded="True">
-              <Node name="model" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="model" expanded="True">
+                <Node name="RedBlackTree.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

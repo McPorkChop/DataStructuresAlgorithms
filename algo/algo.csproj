@@ -45,6 +45,12 @@
     <Compile Include="model\ArrayQueue.cs" />
     <Compile Include="model\LinkQueue.cs" />
     <Compile Include="model\ArrayCircularQueue.cs" />
+    <Compile Include="model\BinaryTreeNode.cs" />
+    <Compile Include="model\Tree.cs" />
+    <Compile Include="model\BinaryTree.cs" />
+    <Compile Include="model\AVLTree.cs" />
+    <Compile Include="model\TreeNode.cs" />
+    <Compile Include="model\RedBlackTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="model\" />
