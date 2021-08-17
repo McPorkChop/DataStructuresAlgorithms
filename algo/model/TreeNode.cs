@@ -1,25 +1,37 @@
-﻿namespace algo.model
+﻿using System.Collections.Generic;
+
+namespace algo.model
 {
     public class TreeNode<T>
     {
         /// <summary>
-        /// 结点值
+        ///     构造函数
         /// </summary>
-        public T value { get; set; }
+        /// <param name="data">结点值</param>
+        /// <param name="childCount">子节点数</param>
+        public TreeNode(T data, int childCount)
+        {
+            Data = data;
+            Children = new List<TreeNode<T>>(childCount);
+        }
+
+        protected TreeNode()
+        {
+        }
 
         /// <summary>
-        /// 子节点
+        ///     结点值
         /// </summary>
-        public TreeNode<T>?[] children { get; set; }
+        public T Data { get; set; }
+
         /// <summary>
-        /// 构造函数
+        ///     父结点
         /// </summary>
-        /// <param name="value">结点值</param>
-        /// <param name="childCount">子节点数</param>
-        public TreeNode(T value, int childCount)
-        {
-            this.value = value;
-            this.children = new TreeNode<T>[childCount];
-        }
+        public TreeNode<T>? Parent { get; set; }
+
+        /// <summary>
+        ///     子节点
+        /// </summary>
+        public List<TreeNode<T>> Children { get; }
     }
 }

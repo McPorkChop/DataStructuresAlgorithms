@@ -1,13 +1,9 @@
-﻿using System;
-namespace algo.model
+﻿namespace algo.model
 {
     /// <summary>
-    /// 红黑数
+    ///     红黑数
     /// </summary>
     public class RedBlackTree
     {
-        public RedBlackTree()
-        {
-        }
     }
 }
